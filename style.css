@@ -1,0 +1,155 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: white;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background: #1e293b;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #cbd5e1;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+section {
+    background: #1e293b;
+    padding: 22px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 110px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #475569;
+    background: #0f172a;
+    color: white;
+    resize: vertical;
+}
+
+button {
+    background: #0284c7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #0369a1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #475569;
+}
+
+th {
+    background: #334155;
+    color: #38bdf8;
+}
+
+td {
+    background: #0f172a;
+}
+
+.output {
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+    line-height: 1.8;
+}
+
+.tree-node {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border: 2px solid #38bdf8;
+    border-radius: 8px;
+    background: #0f172a;
+    color: white;
+}
+
+.tree-children {
+    margin-left: 25px;
+    border-left: 2px solid #64748b;
+    padding-left: 15px;
+}
+
+footer {
+    text-align: center;
+    color: #94a3b8;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+}
+
+
+/* Actual Huffman Tree */
+
+.tree-canvas {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.tree-canvas svg {
+    display: block;
+    margin: auto;
+}

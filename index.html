@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huffman Coding Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Huffman Coding Visualizer</h1>
+        <p>Understand Data Compression Visually</p>
+    </header>
+
+    <main>
+        <section class="input-section">
+            <h2>Enter Your Text</h2>
+
+            <textarea id="inputText"
+                placeholder="Enter text here...">HELLO WORLD</textarea>
+
+            <button id="generateBtn">Generate Huffman Tree</button>
+        </section>
+
+        <section class="result-section">
+            <h2>Character Frequency</h2>
+            <div id="frequencyTable"></div>
+        </section>
+
+        <section class="result-section">
+            <h2>Huffman Codes</h2>
+            <div id="codesTable"></div>
+        </section>
+
+        <section class="result-section">
+            <h2>Huffman Tree</h2>
+            <div id="tree"></div>
+        </section>
+
+        <section class="result-section">
+            <h2>Encoded Text</h2>
+            <div id="encodedText"></div>
+        </section>
+
+        <section class="result-section">
+            <h2>Decoded Text</h2>
+            <div id="decodedText"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Huffman Coding Visualizer | Learning DSA</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
