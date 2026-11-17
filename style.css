@@ -7,75 +7,94 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #101827;
-    color: white;
-    padding: 20px;
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
 }
 
 header {
     text-align: center;
-    padding: 30px;
+    padding: 30px 15px;
     background: #1e293b;
-    border-radius: 12px;
-    margin-bottom: 25px;
+    border-bottom: 2px solid #334155;
 }
 
 header h1 {
     color: #38bdf8;
-    margin-bottom: 10px;
+    font-size: 30px;
 }
 
 header p {
     color: #cbd5e1;
+    margin-top: 5px;
 }
 
 main {
-    max-width: 1000px;
-    margin: auto;
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
 }
 
-section {
+.card {
     background: #1e293b;
     padding: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     border-radius: 12px;
+    border: 1px solid #334155;
 }
 
-h2 {
+.card h2 {
     color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #cbd5e1;
     margin-bottom: 15px;
 }
 
 textarea {
     width: 100%;
-    height: 110px;
+    min-height: 120px;
     padding: 15px;
-    font-size: 16px;
     border-radius: 8px;
     border: 1px solid #475569;
     background: #0f172a;
     color: white;
+    font-size: 16px;
     resize: vertical;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #38bdf8;
 }
 
 button {
+    margin-top: 15px;
+    padding: 12px 22px;
     background: #0284c7;
     color: white;
     border: none;
-    padding: 12px 20px;
     border-radius: 7px;
     cursor: pointer;
-    margin-top: 15px;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 button:hover {
     background: #0369a1;
 }
 
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 10px;
 }
 
 th, td {
@@ -90,62 +109,16 @@ th {
 }
 
 td {
-    background: #0f172a;
+    background: #172033;
 }
-
-.output {
-    background: #0f172a;
-    padding: 15px;
-    border-radius: 8px;
-    overflow-wrap: anywhere;
-    line-height: 1.8;
-}
-
-.tree-node {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 5px;
-    border: 2px solid #38bdf8;
-    border-radius: 8px;
-    background: #0f172a;
-    color: white;
-}
-
-.tree-children {
-    margin-left: 25px;
-    border-left: 2px solid #64748b;
-    padding-left: 15px;
-}
-
-footer {
-    text-align: center;
-    color: #94a3b8;
-    padding: 20px;
-}
-
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    section {
-        padding: 15px;
-    }
-
-    header h1 {
-        font-size: 23px;
-    }
-}
-
-
-/* Actual Huffman Tree */
 
 .tree-canvas {
     width: 100%;
+    min-height: 200px;
     overflow-x: auto;
     overflow-y: hidden;
     background: #0f172a;
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 20px;
 }
 
@@ -153,3 +126,77 @@ footer {
     display: block;
     margin: auto;
 }
+
+.tree-edge {
+    stroke: #94a3b8;
+    stroke-width: 2;
+}
+
+.edge-label {
+    fill: #facc15;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tree-node {
+    fill: #0284c7;
+    stroke: #7dd3fc;
+    stroke-width: 2;
+}
+
+.tree-node.leaf {
+    fill: #15803d;
+    stroke: #86efac;
+}
+
+.node-label {
+    fill: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+.output {
+    background: #0f172a;
+    border: 1px solid #475569;
+    padding: 18px;
+    border-radius: 8px;
+    min-height: 55px;
+    overflow-wrap: anywhere;
+    font-family: monospace;
+    color: #86efac;
+    font-size: 16px;
+}
+
+.placeholder {
+    text-align: center;
+    color: #94a3b8;
+    padding: 35px 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+    background: #1e293b;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    th, td {
+        padding: 9px;
+    }
+}
+

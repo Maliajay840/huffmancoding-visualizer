@@ -1,59 +1,94 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huffman Coding Visualizer</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
         <h1>Huffman Coding Visualizer</h1>
-        <p>Understand Data Compression Visually</p>
+        <p>Understand Lossless Data Compression Step by Step</p>
     </header>
 
     <main>
-        <section class="input-section">
+
+        <section class="card input-section">
             <h2>Enter Your Text</h2>
 
-            <textarea id="inputText"
-                placeholder="Enter text here...">HELLO WORLD</textarea>
+            <textarea id="inputText" placeholder="Enter text here...">HELLO WORLD</textarea>
 
-            <button id="generateBtn">Generate Huffman Tree</button>
+            <button id="generateBtn">Generate Huffman Code</button>
         </section>
 
-        <section class="result-section">
-            <h2>Character Frequency</h2>
-            <div id="frequencyTable"></div>
+        <section class="card">
+            <h2>1. Character Frequencies</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Character</th>
+                            <th>Frequency</th>
+                        </tr>
+                    </thead>
+                    <tbody id="frequencyTable"></tbody>
+                </table>
+            </div>
         </section>
 
-        <section class="result-section">
-            <h2>Huffman Codes</h2>
-            <div id="codesTable"></div>
+        <section class="card">
+            <h2>2. Huffman Binary Tree</h2>
+            <p class="description">
+                Select two minimum-frequency nodes and merge them repeatedly.
+                Left edge = 0, Right edge = 1.
+            </p>
+            <div id="tree" class="tree-canvas">
+                <p class="placeholder">Your Huffman tree will appear here.</p>
+            </div>
         </section>
 
-        <section class="result-section">
-            <h2>Huffman Tree</h2>
-            <div id="tree"></div>
+        <section class="card">
+            <h2>3. Huffman Codes</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Character</th>
+                            <th>Frequency</th>
+                            <th>Binary Code</th>
+                </tr>
+                    </thead>
+                    <tbody id="codesTable"></tbody>
+                </table>
+            </div>
         </section>
 
-        <section class="result-section">
-            <h2>Encoded Text</h2>
-            <div id="encodedText"></div>
+        <section class="card">
+            <h2>4. Encoded Text</h2>
+            <div id="encodedText" class="output">
+                Encoded result will appear here.
+            </div>
         </section>
 
-        <section class="result-section">
-            <h2>Decoded Text</h2>
-            <div id="decodedText"></div>
+        <section class="card">
+            <h2>5. Decoded Text</h2>
+            <div id="decodedText" class="output">
+                Decoded result will appear here.
+            </div>
         </section>
+
     </main>
 
     <footer>
-        <p>Huffman Coding Visualizer | Learning DSA</p>
+        <p>Huffman Coding Algorithm | Data Structures and Algorithms</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
